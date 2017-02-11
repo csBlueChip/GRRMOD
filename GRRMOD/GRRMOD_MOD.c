@@ -22,6 +22,7 @@ THE SOFTWARE.
 
 #include "GRRMOD_internals.h"
 #include "mikmod/include/mikmod.h"
+#include "mikmod/include/drv_wii.h"
 #include <string.h>
 
 static BOOL GRRMOD_Eof(MREADER * reader);
