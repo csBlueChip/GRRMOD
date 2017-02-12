@@ -91,13 +91,19 @@ int main(int argc, char **argv) {
             GRRMOD_SetVolume(Volume, Volume);
         }
         if (WPAD_ButtonsDown(0) & WPAD_BUTTON_A) {
-            GRRMOD_Pause();
+            GRRMOD_Pause(-1);  // Toggle pause
         }
         if (WPAD_ButtonsDown(0) & WPAD_BUTTON_1) {
             GRRMOD_Start();
         }
         if (WPAD_ButtonsDown(0) & WPAD_BUTTON_2) {
             GRRMOD_Stop();
+        }
+        if (WPAD_ButtonsDown(0) & WPAD_BUTTON_UP) {
+            // play sample #1
+        }
+        if (WPAD_ButtonsDown(0) & WPAD_BUTTON_DOWN) {
+            // play sample #2
         }
         if (WPAD_ButtonsDown(0) & WPAD_BUTTON_LEFT) {
             SongNum--;
