@@ -166,14 +166,16 @@ void GRRMOD_Stop() {
 
 /**
  * This function toggles the playing/paused status of the module.
+ * 0=pause-off/play .. 1=pause .. -1=toggle
  */
-void GRRMOD_Pause() {
-    if(sndPlaying==false) {
-        return;
-    }
+void  GRRMOD_Pause (int state) 
+{
+    if(!sndPlaying)  return ;
 
-    RegFunc.Pause();
-    paused = !paused;
+    if ((state == -1) || (state != paused)) {
+        RegFunc.Pause();
+        paused = !paused;
+    }
 }
 
 /**

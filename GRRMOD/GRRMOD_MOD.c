@@ -159,10 +159,7 @@ void GRRMOD_MOD_Unload() {
  * This function starts the specified module playback.
  */
 void GRRMOD_MOD_Start() {
-    if(module == NULL) {
-        return;
-    }
-
+    if (!module)  return;
     Player_Start(module);
 }
 
